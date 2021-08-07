@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solinas</title>
+    <!-- CSS only -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <!--Nav Bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <!--offcanvas trigger-->
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><span
+                    class="navbar-toggler-icon"></span></button>
+            <!--offcanvas trigger-->
+            <a class="navbar-brand fw-bold text-uppercase me-auto" href="#">Solinas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex ms-auto">
+                    <div class="input-group my-2 my-lg-0">
+                        <input type="text" class="form-control" placeholder="Search"
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-primary" type="button" id="button-addon2"><i
+                                class="bi bi-search"></i></button>
+                    </div>
+                </form>
+                <li class="nav-item dropdown">
+                    <a class="nav-link d-inline dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person-fill"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <!--Off canvas-->
+
+    <div class="offcanvas offcanvas-start sidebar-nav bg-dark text-white" data-bs-scroll="true" data-bs-backdrop="false"
+        tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-body p-0">
+            <nav class="navbar-dark">
+                <ul class="navbar-nav">
+                    <li>
+                        <div class="text-muted small fw-bold text-uppercase px-3">
+                            CORE
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="bi bi-speedometer2"></i>
+                            </span>
+                            <span>
+                                Dashboard
+                            </span>
+                        </a>
+                    </li>
+                    <li class="my-4">
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <div class="text-muted small fw-bold text-uppercase px-3">
+                            Interface
+                        </div>
+                    </li>
+                    <li>
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#collapseExample"
+                            role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <span class="me-2">
+                                <i class="bi bi-layout-split"></i>
+                            </span>
+                            <span>
+                                Layout
+                            </span>
+                            <span class="right-icon ms-auto">
+                                <i class="bi bi-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="collapse" id="collapseExample">
+                            <div>
+                                <ul class="navbar-nav ps-3">
+                                    <li>
+                                        <a href="#" class="nav-link px-3">
+                                            <span class="me-2">
+                                                <i class="bi bi-layout-split"></i>
+                                            </span>
+                                            <span>
+                                                nested Layout
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#collapseExample"
+                            role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <span class="me-2">
+                                <i class="bi bi-book-fill"></i> </span>
+                            <span>
+                                Pages
+                            </span>
+                        </a>
+                    </li>
+                    <li class="my-4">
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <div class="text-muted small fw-bold text-uppercase px-3">
+                            Addons
+                        </div>
+                    </li>
+                    <li>
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#collapseExample"
+                            role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <span class="me-2">
+                                <i class="bi bi-graph-up"></i></span>
+                            <span>
+                                Charts
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main class="mt-5 pt-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 fw-bold fs-3">Dashboard</div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <div class="card text-white bg-primary h-100">
+                        <div class="card-header">Leak Hole Diameter</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Fundamentals</h5>
+                            <p class="card-text">A leak rate of 1.0·10-12 mbar·l/s corresponds to hole diameter of 1
+                                angstrom (Å); this is the lower detection limit for modern helium leak detectors.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card text-white bg-success h-100">
+                        <div class="card-header text-capitalize">percentage of surface corrosion</div>
+                        <div class="card-body">
+                            <h5 class="card-title text-capitalize">surface corrosion</h5>
+                            <p class="card-text">Surface corrosion normally presents as exfoliation or surface pitting
+                                or a ... Due to the typical parabolic rate of increase of surface corrosion and oxide
+                                ....</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card text-white bg-danger mb-3 h-100">
+                        <div class="card-header text-capitalize">temperature</div>
+                        <div class="card-body">
+                            <h5 class="card-title text-capitalize">definition</h5>
+                            <p class="card-text">A measure of the ability of a substance, or more generally of any
+                                physical system, to transfer heat energy to another physical system. The temperature of
+                                a ...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card text-white bg-warning mb-3 h-100">
+                        <div class="card-header">Pressure</div>
+                        <div class="card-body">
+                            <h5 class="card-title text-capitalize">definition</h5>
+                            <p class="card-text">Pressure (symbol: p or P) is the force applied perpendicular to the
+                                surface of an object per unit area over which that force is distributed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="me-2"><i class="bi bi-distribute-vertical"></i></span>
+                            Leak Hole Diameter
+                        </div>
+                        <div class="card-body">
+                            <canvas class="chart" width="400" height="200">
+
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="me-2"><i class="bi bi-gear-wide-connected"></i></span>
+                            Percentage of Surface Corrosion
+                        </div>
+                        <div class="card-body">
+                            <canvas class="chart" width="400" height="200">
+
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="me-2"><i class="bi bi-thermometer-half"></i></span>
+                            Temperature
+                        </div>
+                        <div class="card-body">
+                            <canvas class="chart" width="400" height="200">
+
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="me-2"><i class="bi bi-speedometer"></i></span>
+                            Pressure
+                        </div>
+                        <div class="card-body">
+                            <canvas class="chart" width="400" height="200">
+
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="me-2">
+                                <i class="bi bi-bar-chart-line-fill"></i>
+                                Graph Of Overall Average Result
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <canvas class="chart" width="400" height="200">
+
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/jquery.dataTables.min.js"></script>
+    <script src="./js/dataTables.bootstrap5.min.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
